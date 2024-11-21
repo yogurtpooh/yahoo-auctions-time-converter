@@ -1,0 +1,17 @@
+{ 
+    "manifest_version": 3, 
+    "name": "Yahoo! Auctions Time Converter",
+    "version": "1.0.0",
+    "description": "Converts Yahoo! Auctions bidding times to your timezone",
+    "permissions": ["activeTab"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://page.auctions.yahoo.co.jp/jp/auction/*"],
+            "js": ["content.js"]
+        }
+    ]
+    
+}
